@@ -1,0 +1,856 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: $vermelho-escuro;
+    color: $branco;
+}
+
+body {
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Header*/
+header {
+    @include size(100%, 100vh);
+    animation: mudarbg 15s infinite;
+}
+
+@keyframes mudarbg {
+    0% {
+        background: url("../geral/bg1.webp") center/cover no-repeat;
+    }
+
+    40% {
+        background: url("../geral/bg2.webp") center/cover no-repeat;
+    }
+
+    70% {
+        background: url("../geral/bg3.webp") center/cover no-repeat;
+    }
+
+    100% {
+        background: url("../geral/bg1.webp") center/cover no-repeat;
+    }
+}
+
+header #caixaHeaderUm {
+    @include size(100%, 20vh);
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+}
+
+header #caixaHeaderUm .navbar {
+    @include size(100%, 80%);
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+header #caixaHeaderUm.visible .navbar {
+    top: 0;
+    background-color: $preto;
+    z-index: 2;
+}
+
+header #caixaHeaderUm.hidden .navbar {
+    top: -100%;
+}
+
+header .navbar-brand {
+    @include size(20%, 100%);
+}
+
+header .navbar-brand img {
+    width: 15rem;
+    cursor: pointer;
+}
+
+header .navbar-nav {
+    @include size(60%, 100%);
+}
+
+header .navbar-nav .nav-item {
+    padding: 0.5rem 1rem;
+}
+
+header .navbar-nav .nav-item,
+header .navbar-nav .nav-link,
+footer .footer-list .nav-item {
+    @include flex(row, center, center);
+    @include font(1.2em, 300, $branco);
+    cursor: pointer;
+    z-index: 1;
+    background: right / 0% 100% no-repeat linear-gradient($vermelho, $vermelho);
+    transition: all 0.2s linear;
+}
+
+header .navbar-nav .nav-item:hover,
+footer .footer-list .nav-item:hover {
+    background-size: 100% 100%;
+    z-index: 0;
+}
+
+header .navbar-nav .nav-link {
+    @include flex(row, center, center);
+    padding: 0;
+    gap: 0.5rem;
+}
+
+header .navbar-nav .nav-item .dropdown-toggle {
+    @include font(1.1em, 300, $branco);
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    border: none;
+}
+
+header .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    background: $vermelho-escuro;
+}
+
+header .caixaHeaderDois {
+    @include size(100%, 100%);
+    @include font(1.9em, 500, $branco);
+    padding-top: 6rem;
+}
+
+header .caixaHeaderDois h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+header .caixaHeaderDois .informacoes-evento p {
+    @include flex(row, center, center);
+    gap: 0.5rem;
+}
+
+header .caixaHeaderDois .informacoes-evento p i {
+    user-select: none;
+}
+
+header .caixaHeaderDois .botoes-header {
+    @include size(100%, 10%);
+    gap: 0.5rem;
+}
+
+header .botoes-header .header-btn {
+    @include font(0.6em, 500, $preto);
+    text-transform: uppercase;
+    border-radius: 0.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+header .botoes-header .header-btn:nth-child(1) {
+    @include size(10rem, 3rem);
+    background-color: $vermelho;
+    color: $branco;
+}
+
+header .botoes-header .header-btn:nth-child(2) {
+    @include size(8rem, 3rem);
+    background-color: $branco;
+}
+
+header .botoes-header .header-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 0.5rem -0.4rem $vermelho-escuro;
+}
+
+/*Main*/
+.main-titulo {
+    @include size(100%, 100%);
+    @include font(2.2em, 500, $preto);
+    position: relative;
+}
+
+.main-titulo::before {
+    @include size(4rem, 0.2rem);
+    @include flex(row, center, center);
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    border-radius: 0.2rem;
+    background-color: $preto;
+}
+
+.descricao {
+    background-color: $branco-escuro;
+    @include size(100%, 15vh);
+}
+
+.descricao h2::before {
+    bottom: 1.7rem;
+}
+
+.carousel img {
+    @include size(100%, 30rem);
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+    @include size(5rem, 5rem);
+    background-color: $vermelho;
+    border-radius: 50%;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    margin: 0 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel .carousel-indicators {
+    z-index: 1;
+}
+
+.carousel .carousel-indicators button {
+    background-color: $vermelho-escuro;
+}
+
+.btn-group {
+    @include size(75%, 100%);
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+}
+
+.btn-group .btn {
+    --bs-btn-border-radius: 0;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 0.75rem;
+}
+
+.btn-group .btn:hover {
+    box-shadow: 0 0.5rem 0.5rem -0.4rem $vermelho-escuro;
+}
+
+.programacao-box.hidden {
+    display: none;
+}
+
+#Parceiros {
+    background-color: $branco-escuro;
+}
+
+.parceiro-logo {
+    @include size(12rem, 12rem);
+}
+
+.card-box {
+    @include size(100%, 100%);
+}
+
+.card {
+    @include size(18rem, 30rem);
+    @include flex(column, center, center);
+    text-align: center;
+}
+
+.card-image {
+    @include size(100%, 20rem);
+    @include flex(row, center, center);
+    overflow: hidden;
+}
+
+.card-img-top {
+    @include size(100%, 20rem);
+    user-select: none;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-body {
+    @include size(100%, 10rem);
+    @include flex(column, space-around, center);
+    margin-top: 0.5rem;
+}
+
+.card-title {
+    @include font(1.2em, 500, $preto);
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-button {
+    @include size(100%, 3rem);
+    transition: all 0.2s ease-in-out;
+}
+
+.card-button:hover,
+.card-button:focus {
+    box-shadow: 0 0.5rem 0.5rem -0.4rem #808080;
+    transform: translateY(-0.25rem);
+}
+
+.card-image .card-img-top:hover {
+    transform: scale(1.1);
+}
+
+#Endereco {
+    @include size(100%, 100%);
+    @include flex(column, center, center);
+}
+
+.mapa,
+.localizacao {
+    @include size(50%, 100%);
+    text-align: center;
+}
+
+.mapa iframe {
+    @include size(100%, 38rem);
+    border: none;
+}
+
+.localizacao {
+    padding: 1rem;
+}
+
+table {
+    @include size(60%, 100%);
+    border-collapse: collapse;
+    border: 0.01rem solid $preto;
+    text-align: center;
+}
+
+table th {
+    background-color: $vermelho-escuro;
+    @include font(1.2em, 500, $branco);
+    padding: 0.5rem 0 0.5rem 0;
+    text-transform: uppercase;
+}
+
+table tr {
+    border: 0.01rem solid $preto;
+    @include font(1.1em, 500, $preto);
+}
+
+table tr td {
+    padding: 0.5rem;
+}
+
+.informacoes-contatos {
+    @include size(100%, 40vh);
+}
+
+.contact-box {
+    @include size(40%, 30vh);
+    @include flex(column, center, center);
+    border-bottom: 0.01rem solid $vermelho;
+}
+
+.contact-box i {
+    color: $cinza;
+    border: 0.01rem solid $cinza;
+    border-radius: 50%;
+    padding: 1.25rem;
+    font-size: 1.5em;
+    user-select: none;
+    margin-bottom: 1.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-box:hover i {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 0.5rem -0.4rem $vermelho-escuro;
+}
+
+.contact-box i:hover {
+    background-color: $vermelho-escuro;
+    color: $branco;
+}
+
+.contact-box p {
+    font-size: 1em;
+}
+
+.contact-title {
+    font-weight: bold;
+    color: $vermelho;
+}
+
+#msg-box {
+    @include size(50%, 100%);
+    margin-left: 3.5rem;
+}
+
+#msg-box h2 {
+    @include font(1.5em, 500, $preto);
+}
+
+#contact-form {
+    @include size(50%, 100%);
+    @include flex(column, center, center);
+    margin-right: 10rem;
+}
+
+#contact-form form {
+    padding-top: 1rem;
+}
+
+#contact-form .form-control {
+    margin-bottom: 1rem;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    max-height: 20rem;
+}
+
+.form-control:focus {
+    border-color: $vermelho;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba($vermelho, 0.25);
+}
+
+#contact-form .form-button {
+    @include size(7.5rem, 3.125rem);
+    @include font(1em, 500, $branco);
+    margin: 0 auto;
+    border-radius: 3rem;
+    border: none;
+    color: $vermelho;
+    background-color: transparent;
+    border: 0.1rem solid $vermelho;
+    box-shadow: 0 0.5rem 0.5rem -0.4rem $vermelho-escuro;
+    transition: all 0.2s ease-in-out;
+}
+
+#contact-form .form-button:hover {
+    background-color: $vermelho;
+    color: $branco;
+    transform: translateY(-0.25rem);
+}
+
+.group {
+    @include size(100%, 3rem);
+    position: relative;
+    margin-bottom: 2.8125rem;
+}
+
+.group input {
+    @include size(100%, 3rem);
+    font-size: 18px;
+    padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
+    display: block;
+    border: none;
+    border-bottom: 0.01rem solid $branco-escuro;
+}
+
+.group input:focus {
+    outline: none;
+}
+
+.group label {
+    @include font(1.2em, 500, $cinza-claro);
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+.group input:focus ~ label,
+.group input:valid ~ label {
+    font-size: 1em;
+    top: -1.25rem;
+}
+
+.group input:valid ~ .bar:before,
+.group input:valid ~ .bar:after {
+    background: $verde;
+}
+
+.group input:invalid ~ .bar::before,
+.group input:invalid ~ .bar::after {
+    background: $vermelho;
+}
+
+.invalid:invalid ~ label {
+    color: $vermelho;
+    top: -1.25rem;
+}
+
+.invalid:valid ~ label {
+    color: $verde;
+    top: -1.25rem;
+}
+
+.group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.group .bar:before,
+.group .bar:after {
+    content: "";
+    height: 0.1rem;
+    width: 0;
+    bottom: 0.07rem;
+    position: absolute;
+    background: $vermelho;
+    transition: all 0.2s ease;
+}
+
+.group .bar:before {
+    left: 50%;
+}
+
+.group .bar:after {
+    right: 50%;
+}
+
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.group input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    0% {
+        background: $vermelho;
+    }
+
+    100% {
+        width: 0;
+        background: transparent;
+    }
+}
+
+footer {
+    background-color: $preto;
+    padding: 0 3.125rem 3.125rem;
+}
+
+footer .footer-logo {
+    @include size(100%, 10rem);
+}
+
+footer .footer-logo img {
+    @include size(15rem, 15rem);
+    cursor: pointer;
+}
+
+footer .social a {
+    @include flex(row, center, center);
+    @include size(2.2rem, 2.2rem);
+    @include font(1.25em, 500, $branco);
+    background-color: #33383b;
+    border-radius: 0.125rem;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+footer .social a:hover {
+    transform: scale(1.1);
+}
+
+footer .footer-list {
+    @include font(1.125em, bold, $branco);
+    padding: 0 0 0.625rem;
+    list-style: none;
+    transition: ease 0.25s;
+}
+
+footer .copyright {
+    @include font(1em, 600, $cinza-claro);
+}
+
+/*Animate*/
+.reveal {
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/*Accordions*/
+.accordion {
+    border: 0.01rem solid rgba(203, 21, 24, 0.4);
+    --bs-accordion-btn-focus-border-color: #cb1517;
+    --bs-accordion-btn-focus-box-shadow: #cb1517;
+    --bs-accordion-border-color: rgba(203, 21, 24, 0.4);
+    --bs-accordion-active-color: #cb1517;
+    --bs-accordion-active-bg: rgba(203, 21, 24, 0.1);
+}
+
+.accordion-button {
+    color: $vermelho;
+}
+
+/*Dropdowns*/
+.dropdown-menu {
+    --bs-dropdown-border-radius: 0;
+    --bs-dropdown-padding-y: 0.1rem;
+}
+
+/*Loader*/
+@-webkit-keyframes waterfall {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-250%);
+        transform: translateY(-250%);
+    }
+
+    40%,
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(250%);
+        transform: translateY(250%);
+    }
+}
+
+@keyframes waterfall {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-250%);
+        transform: translateY(-250%);
+    }
+    40%,
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(250%);
+        transform: translateY(250%);
+    }
+}
+
+.loader {
+    @include size(100%, 100vh);
+    @include flex(column, center, center);
+    @include font(1.5em, 500, $branco);
+    background-color: $preto;
+    user-select: none;
+    position: absolute;
+    inset: 0;
+    z-index: 9999;
+}
+
+.loader .waterfall {
+    @include size(100%, 25%);
+    @include flex(row, center, center);
+}
+
+.loader .waterfall div {
+    -webkit-animation: waterfall 1.5s infinite;
+    animation: waterfall 1.5s infinite;
+    background-color: $vermelho-escuro;
+    height: 1.25rem;
+    margin-top: -0.625rem;
+    opacity: 0;
+    position: relative;
+    width: 1.25rem;
+}
+
+.loader .waterfall div:nth-of-type(1) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+    margin-left: -0.625rem;
+}
+
+.loader .waterfall div:nth-of-type(2) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    margin-left: 0.9375rem;
+}
+
+.loader .waterfall div:nth-of-type(3) {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+    margin-left: -2.1875rem;
+}
+
+.loader .waterfall div:nth-of-type(4) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    margin-left: 2.5rem;
+}
+
+.loader .waterfall div:nth-of-type(5) {
+    -webkit-animation-delay: 1.25s;
+    animation-delay: 1.25s;
+    margin-left: -3.75rem;
+}
+
+/*Media Queries*/
+@media (width <= 1070px) {
+    header .navbar-nav .nav-item,
+    header .navbar-nav .nav-link,
+    footer .footer-list .nav-item {
+        font-size: 1em;
+        text-align: left;
+    }
+}
+
+@media (width <= 1200px) {
+    .card-box {
+        width: 70%;
+    }
+}
+
+@media (width <= 992px) {
+    header .navbar-toggler {
+        border: none;
+        font-size: 1.5em;
+    }
+
+    header .offcanvas {
+        background-color: $preto;
+        color: $branco;
+    }
+
+    header .navbar-nav {
+        @include size(auto, auto);
+    }
+
+    header .navbar-brand {
+        padding-left: 6rem;
+    }
+
+    main .localizacao,
+    main .mapa {
+        @include size(100%, 100%);
+    }
+
+    main .informacoes-contatos {
+        @include size(100%, 70vh);
+    }
+
+    main .contact-box {
+        @include size(70%, 30vh);
+    }
+
+    main #msg-box {
+        @include size(100%, 100%);
+        margin: 0;
+    }
+
+    main #contact-form {
+        @include size(100%, 100%);
+        margin: 0;
+    }
+
+    main #contact-form form {
+        padding-top: 2rem;
+    }
+
+    main .group {
+        @include size(90%, 100%);
+    }
+
+    main #contact-form textarea {
+        @include size(95%, 100%);
+    }
+}
+
+@media (width <= 768px) {
+    header .caixaHeaderDois h1 {
+        font-size: 1.5em;
+    }
+
+    header .caixaHeaderDois p {
+        font-size: 1em;
+    }
+
+    header .caixaHeaderDois .botoes-header a:nth-child(1) {
+        @include size(8rem, 2.5rem);
+    }
+
+    header .caixaHeaderDois .botoes-header a:nth-child(2) {
+        @include size(6rem, 2.5rem);
+    }
+
+    header .navbar-nav .nav-item,
+    header .navbar-nav .nav-link,
+    footer .footer-list .nav-item {
+        font-size: 1.1em;
+    }
+
+    .carousel .carousel-control-prev,
+    .carousel .carousel-control-next {
+        @include size(3rem, 3rem);
+    }
+
+    main #Convidados .modal .modal-body {
+        @include font(1em, 500, $preto);
+        letter-spacing: -0.02em;
+    }
+}
+
+@media (width <= 650px) {
+    .btn-group {
+        @include size(100%, 100%);
+    }
+    .programacoes {
+        width: 100% !important;
+    }
+
+    .programacao-box {
+        width: 100% !important;
+    }
+
+    table {
+        @include size(100%, 100%);
+    }
+}
+
+@media (width <= 560px) {
+    header .caixaHeaderDois h1 {
+        font-size: 1.4em;
+    }
+
+    header .caixaHeaderDois p {
+        font-size: 0.8em;
+    }
+
+    .card-box {
+        width: 90%;
+    }
+
+    .card {
+        width: 25rem;
+    }
+}
+
+@media (width <= 335px) {
+    header .caixaHeaderDois .informacoes-evento p {
+        font-size: 0.6em;
+    }
+}
