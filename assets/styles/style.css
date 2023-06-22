@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 *::-moz-selection {
   background-color: #ad1113;
   color: #ffffff;
@@ -49,6 +43,7 @@ header #caixaHeaderUm {
   position: fixed;
   inset: 0;
   z-index: 2;
+  transition: all 0.3s ease-in-out;
 }
 
 header #caixaHeaderUm .navbar {
@@ -57,7 +52,6 @@ header #caixaHeaderUm .navbar {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition: all 0.3s ease-in-out;
 }
 
 header #caixaHeaderUm.visible .navbar {
@@ -66,7 +60,7 @@ header #caixaHeaderUm.visible .navbar {
   z-index: 2;
 }
 
-header #caixaHeaderUm.hidden .navbar {
+header #caixaHeaderUm.hidden {
   top: -100%;
 }
 
@@ -75,18 +69,15 @@ header .navbar-brand {
   height: 100%;
 }
 
-header .navbar-brand img {
-  width: 15rem;
+header .navbar-brand img,
+footer .footer-logo img {
+  width: 12rem;
   cursor: pointer;
 }
 
 header .navbar-nav {
   width: 60%;
   height: 100%;
-}
-
-header .navbar-nav .nav-item {
-  padding: 0.5rem 1rem;
 }
 
 header .navbar-nav .nav-item,
@@ -106,21 +97,14 @@ footer .footer-list .nav-item {
   z-index: 1;
   background: right/0% 100% no-repeat linear-gradient(#cb1517, #cb1517);
   transition: all 0.2s linear;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
 }
 
 header .navbar-nav .nav-item:hover,
 footer .footer-list .nav-item:hover {
   background-size: 100% 100%;
   z-index: 0;
-}
-
-header .navbar-nav .nav-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  gap: 0.5rem;
 }
 
 header .navbar-nav .nav-item .dropdown-toggle {
@@ -243,7 +227,7 @@ header .botoes-header .header-btn:hover {
   bottom: 1.7rem;
 }
 
-.carousel img {
+#carousel img {
   width: 100%;
   height: 30rem;
   -o-object-fit: cover;
@@ -252,8 +236,8 @@ header .botoes-header .header-btn:hover {
      object-position: center;
 }
 
-.carousel .carousel-control-prev,
-.carousel .carousel-control-next {
+#carousel .carousel-control-prev,
+#carousel .carousel-control-next {
   width: 5rem;
   height: 5rem;
   background-color: #cb1517;
@@ -265,27 +249,21 @@ header .botoes-header .header-btn:hover {
   transition: all 0.3s ease-in-out;
 }
 
-.carousel .carousel-control-prev:hover,
-.carousel .carousel-control-next:hover {
+#carousel .carousel-control-prev:hover,
+#carousel .carousel-control-next:hover {
   opacity: 1;
 }
 
-.carousel .carousel-indicators {
-  z-index: 1;
-}
-
-.carousel .carousel-indicators button {
+#carousel .carousel-indicators button {
   background-color: #ad1113;
 }
 
+#carousel .carousel-indicators button.active {
+  background-color: #cb1517;
+}
+
 .btn-group {
-  width: 75%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  list-style: none;
 }
 
 .btn-group .btn {
@@ -296,10 +274,6 @@ header .botoes-header .header-btn:hover {
 
 .btn-group .btn:hover {
   box-shadow: 0 0.5rem 0.5rem -0.4rem #ad1113;
-}
-
-.programacao-box.hidden {
-  display: none;
 }
 
 #Parceiros {
@@ -317,12 +291,8 @@ header .botoes-header .header-btn:hover {
 }
 
 .card {
-  width: 18rem;
+  width: 20rem;
   height: 30rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -532,9 +502,9 @@ table tr td {
 }
 
 .form-control:focus {
-  border-color: #cb1517;
+  border-color: #5e5e5e;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(203, 21, 23, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(94, 94, 94, 0.25);
 }
 
 #contact-form .form-button {
@@ -603,24 +573,23 @@ table tr td {
   top: -1.25rem;
 }
 
-.group input:valid ~ .bar:before,
-.group input:valid ~ .bar:after {
+.group input.validation:valid ~ .bar:before,
+.group input.validation:valid ~ .bar:after {
   background: #00a650;
 }
 
-.group input:invalid ~ .bar::before,
-.group input:invalid ~ .bar::after {
+.group input.validation:invalid ~ .bar::before,
+.group input.validation:invalid ~ .bar::after {
   background: #cb1517;
 }
 
-.invalid:invalid ~ label {
+.validation:invalid ~ label {
   color: #cb1517;
   top: -1.25rem;
 }
 
-.invalid:valid ~ label {
+.validation:valid ~ label {
   color: #00a650;
-  top: -1.25rem;
 }
 
 .group .bar {
@@ -636,7 +605,7 @@ table tr td {
   width: 0;
   bottom: 0.07rem;
   position: absolute;
-  background: #cb1517;
+  background: #5e5e5e;
   transition: all 0.2s ease;
 }
 
@@ -669,7 +638,33 @@ table tr td {
 
 @keyframes inputHighlighter {
   0% {
+    background: #5e5e5e;
+  }
+  100% {
+    width: 0;
+    background: transparent;
+  }
+}
+.group input:focus.validation:invalid ~ .highlight {
+  animation: inputHighlighterError 0.3s ease;
+}
+
+@keyframes inputHighlighterError {
+  0% {
     background: #cb1517;
+  }
+  100% {
+    width: 0;
+    background: transparent;
+  }
+}
+.group input:focus.validation:valid ~ .highlight {
+  animation: inputHighlighterSucess 0.3s ease;
+}
+
+@keyframes inputHighlighterSucess {
+  0% {
+    background: #00a650;
   }
   100% {
     width: 0;
@@ -678,18 +673,17 @@ table tr td {
 }
 footer {
   background-color: #1a1a1a;
-  padding: 0 3.125rem 3.125rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 footer .footer-logo {
   width: 100%;
   height: 10rem;
+  padding-left: 1rem;
 }
 
 footer .footer-logo img {
-  width: 15rem;
-  height: 15rem;
-  cursor: pointer;
+  padding-left: 0.5rem;
 }
 
 footer .social a {
@@ -734,6 +728,7 @@ footer .copyright {
   font-family: "Source Sans Pro", sans-serif;
   word-wrap: break-word;
   text-align: center;
+  padding-left: 2rem;
 }
 
 /*Animate*/
@@ -848,12 +843,11 @@ footer .copyright {
   header .navbar-nav .nav-link,
   footer .footer-list .nav-item {
     font-size: 1em;
-    text-align: left;
   }
 }
-@media (width <= 1200px) {
-  .card-box {
-    width: 70%;
+@media (width >= 992px) {
+  .navbar-expand-lg .offcanvas {
+    height: 80% !important;
   }
 }
 @media (width <= 992px) {
@@ -869,8 +863,8 @@ footer .copyright {
     width: auto;
     height: auto;
   }
-  header .navbar-brand {
-    padding-left: 6rem;
+  main #Parceiros figure {
+    width: 100% !important;
   }
   main .localizacao,
   main .mapa {
@@ -903,11 +897,15 @@ footer .copyright {
     height: 100%;
   }
   main #contact-form textarea {
-    width: 95%;
+    width: 90%;
     height: 100%;
   }
 }
 @media (width <= 768px) {
+  header .navbar-brand {
+    width: 35%;
+    justify-content: flex-start;
+  }
   header .caixaHeaderDois h1 {
     font-size: 1.5em;
   }
@@ -947,7 +945,8 @@ footer .copyright {
     width: 100%;
     height: 100%;
   }
-  .programacoes {
+  .programacoes,
+  main .btn-group {
     width: 100% !important;
   }
   .programacao-box {
@@ -963,17 +962,20 @@ footer .copyright {
     font-size: 1.4em;
   }
   header .caixaHeaderDois p {
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+  main .btn-group {
+    flex-direction: column !important;
+  }
+  main .btn-group li {
+    width: 100% !important;
   }
   .card-box {
     width: 90%;
   }
-  .card {
-    width: 25rem;
-  }
 }
-@media (width <= 335px) {
-  header .caixaHeaderDois .informacoes-evento p {
-    font-size: 0.6em;
+@media (width <= 450px) {
+  header .navbar-brand {
+    width: 55%;
   }
 }/*# sourceMappingURL=style.css.map */

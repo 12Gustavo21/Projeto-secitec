@@ -1,61 +1,22 @@
 $(document).ready(function () {
-    // Mostrar ou esconder a nav
-    const headerBox = document.getElementById("caixaHeaderUm");
+    const headerBox = document.querySelector("#caixaHeaderUm");
+    let prevScrollPos = window.scrollY || document.documentElement.scrollTop;
 
-    var prevScrollpos = window.pageYOffset;
+    window.addEventListener("scroll", function () {
+        const currentScrollPos = window.scrollY || document.documentElement.scrollTop;
 
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-
-        if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
+        if (prevScrollPos < currentScrollPos && currentScrollPos > 100) {
             headerBox.classList.remove("visible");
             headerBox.classList.add("hidden");
         } else if (currentScrollPos === 0) {
-            headerBox.classList.remove("visible");
             headerBox.classList.remove("hidden");
+            headerBox.classList.remove("visible");
         } else {
-            if (prevScrollpos > currentScrollPos) {
-                headerBox.classList.add("visible");
-                headerBox.classList.remove("hidden");
-            }
+            headerBox.classList.add("visible");
+            headerBox.classList.remove("hidden");
         }
-        prevScrollpos = currentScrollPos;
-    };
-
-    // Fitrar as datas
-    $(".filter-btn").on("click", function () {
-        var type = $(this).attr("id");
-        var boxes = $(".programacao-box");
-
-        $(".main-btn").removeClass("active");
-        $(this).addClass("active");
-
-        if (type == "dois-btn") {
-            eachBoxes("dois", boxes);
-        } else if (type == "tres-btn") {
-            eachBoxes("tres", boxes);
-        } else if (type == "quatro-btn") {
-            eachBoxes("quatro", boxes);
-        } else if (type == "cinco-btn") {
-            eachBoxes("cinco", boxes);
-        } else if (type == "seis-btn") {
-            eachBoxes("seis", boxes);
-        } else if (type == "sete-btn") {
-            eachBoxes("sete", boxes);
-        } else {
-            eachBoxes("default", boxes);
-        }
+        prevScrollPos = currentScrollPos;
     });
-
-    function eachBoxes(type, boxes) {
-        $(boxes).each(function () {
-            if (!$(this).hasClass(type)) {
-                $(this).fadeOut("medium");
-            } else {
-                $(this).fadeIn();
-            }
-        });
-    }
 
     //Scrollar até as seções
     var navIten = $(".nav-item");
@@ -188,6 +149,18 @@ $(document).ready(function () {
 
     const year = document.getElementById("year");
     year.textContent = new Date().getFullYear();
+
+    $('input').each(function (i) {
+        $(this).on('input', function () {
+            var isActiveLabel = $('label').eq(i).hasClass('active');
+            var isInputEmpty = $(this).val().trim() === '';
+
+            $(this).toggleClass('validation', isActiveLabel && !isInputEmpty);
+            $('.bar').eq(i).toggleClass('validation', isActiveLabel && !isInputEmpty);
+            $('.highlight').eq(i).toggleClass('validation', isActiveLabel && !isInputEmpty);
+        });
+    });
+
 });
 
 //Loader
@@ -208,12 +181,3 @@ window.addEventListener("progress", (event) => {
     const progress = (loaded / total) * 100;
     loader.style.display = `${progress}%`;
 });
-
-//Validação dos inputs
-function validarInput(input) {
-    if (input.value === "") {
-        input.classList.remove("invalid");
-    } else {
-        input.classList.add("invalid");
-    }
-}
