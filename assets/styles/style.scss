@@ -791,6 +791,10 @@ footer .copyright {
     main #contact-form textarea {
         background-color: transparent !important;
     }
+
+    main .accordion-body > h6 {
+        text-decoration: underline;
+    }
 }
 
 @media (width <= 1070px) {
