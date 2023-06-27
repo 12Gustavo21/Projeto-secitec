@@ -34,6 +34,7 @@ $datas = $dados_json->datas;
     <meta property="og:title" content="8ª SECITEC" />
     <meta property="og:description" content="Site da 8ª Semana de Ciência e Tecnologia" />
     <meta property="og:image" content="https://www.ifpb.edu.br/imagens/logotipos/ifpb-1" />
+    <meta name="color-scheme" content="dark light">
 
     <!--Estilos-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -65,7 +66,7 @@ $datas = $dados_json->datas;
 
 <body>
     <!--Header-->
-    <header class="mb-5">
+    <header>
         <section id="caixaHeaderUm">
             <nav class="navbar navbar-expand-lg navbar-dark d-flex 
             flex-row justify-content-between align-items-center px-3 pt-0 pb-0">
@@ -282,7 +283,7 @@ $datas = $dados_json->datas;
                 </div>
                 <p>Carregando...</p>
             </section>
-            <section id="Sobre">
+            <section id="Sobre" class="py-5">
                 <div>
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Sobre a SECITEC</h2>
                 </div>
@@ -332,7 +333,7 @@ $datas = $dados_json->datas;
                     </figure>
                 </div>
             </section>
-            <section id="SECTIEC-passadas" class="pt-5">
+            <section id="SECTIEC-passadas">
                 <section class="descricao d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">SECITEC's passadas
                     </h2>
@@ -480,8 +481,8 @@ $datas = $dados_json->datas;
                     </div>
                 </div>
             </section>
-            <section id="Parceiros"
-                class="d-flex flex-wrap flex-column align-items-center justify-content-between w-100 h-100 py-3">
+            <section id="Parceiros" class="d-flex flex-wrap flex-column align-items-center 
+            justify-content-between w-100 h-100 py-3">
                 <div class="d-flex justify-content-center align-items-center w-100 pt-3">
                     <h2 class="main-titulo d-flex align-items-start justify-content-center reveal">Parceiros</h2>
                 </div>
@@ -493,13 +494,20 @@ $datas = $dados_json->datas;
                         loading="lazy" draggable="false" title="Logo UEPB">
                 </figure>
             </section>
-            <section id="Convidados" class="pt-5 gap-3 d-flex justify-content-center align-items-center flex-column">
+            <section id="Convidados" class="py-5 gap-3 d-flex justify-content-center align-items-center flex-column">
                 <div class="d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Convidados</h2>
                 </div>
                 <div class="d-flex flex-row justify-content-center 
                 align-items-center flex-wrap gap-5 pt-3 px-3 card-box">
                     <?php
+                    function compararNomes($a, $b)
+                    {
+                        return strcmp($a->usua_nome, $b->usua_nome);
+                    }
+
+                    usort($convidados, 'compararNomes');
+
                     $convidadosExibidos = [];
                     foreach ($convidados as $convidado) {
                         if (!empty($convidado->usua_link_imagem) && !in_array($convidado->usua_email, $convidadosExibidos)) {
@@ -515,7 +523,7 @@ $datas = $dados_json->datas;
                                         <?php echo $convidado->usua_nome; ?>
                                     </h3>
                                     <button class="btn btn-modal btn-outline-secondary p-2 card-button" data-bs-toggle="modal"
-                                        data-bs-target="#modal<?php echo $convidado->usua_email; ?>">Biografia</button>
+                                        data-bs-target="#modal<?php echo $convidado->usua_email; ?>">Ver biografia</button>
                                 </section>
                                 <!-- Modal -->
                                 <section class="modal fade" id="modal<?php echo $convidado->usua_email; ?>"
@@ -547,7 +555,7 @@ $datas = $dados_json->datas;
                     ?>
                 </div>
             </section>
-            <section id="Endereco" class="pt-5">
+            <section id="Endereco" class="pb-5">
                 <section class="descricao d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Faça-nos uma visita
                     </h2>
@@ -605,7 +613,7 @@ $datas = $dados_json->datas;
                     </section>
                 </section>
             </section>
-            <section id="Contatos" class="pt-5">
+            <section id="Contatos" class="pb-5">
                 <section class="d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Entre em contato
                         conosco
@@ -629,7 +637,8 @@ $datas = $dados_json->datas;
                             mensagem</h2>
                     </section>
                     <section id="contact-form">
-                        <form class="w-100 d-flex flex-column justify-content-center align-items-center reveal">
+                        <form class="w-100 d-flex flex-column justify-content-center align-items-center reveal"
+                            action="https://formsubmit.co/gustavo927318@gmail.com" method="POST">
                             <div class="group">
                                 <input type="text" class="input" id="input-nome" name="name" required>
                                 <span class="highlight"></span>
@@ -652,7 +661,7 @@ $datas = $dados_json->datas;
         </section>
     </main>
     <!--Footer-->
-    <footer class="mt-5 d-flex flex-row justify-content-center align-items-start w-100 h-50">
+    <footer class="d-flex flex-row justify-content-center align-items-start w-100 h-50">
         <section class="d-flex justify-content-start align-items-center flex-column w-100 h-100 reveal">
             <section
                 class="footer-logo image-box d-flex justify-content-center align-items-center justify-content-lg-start">

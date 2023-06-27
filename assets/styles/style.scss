@@ -1,6 +1,10 @@
 @import "./variables";
 @import "./mixins";
 
+:root {
+    color-scheme: dark light;
+}
+
 *::selection {
     background-color: $vermelho-escuro;
     color: $branco;
@@ -564,6 +568,7 @@ footer {
 footer .footer-logo {
     @include size(100%, 10rem);
     padding-left: 1rem;
+    user-select: none;
 }
 
 footer .footer-logo img {
@@ -720,6 +725,73 @@ footer .copyright {
 }
 
 /*Media Queries*/
+@media (prefers-color-scheme: dark) {
+    header #caixaHeaderUm.visible .navbar,
+    .descricao,
+    #Parceiros,
+    #Convidados .card,
+    footer {
+        background-color: $cinza;
+    }
+
+    header .botoes-header .header-btn:nth-child(2),
+    main #Sobre,
+    .main-titulo,
+    .accordion-body,
+    #Convidados .card .card-body .card-title,
+    #Convidados .card .card-body .btn,
+    #Contatos .contact-box i,
+    .modal .modal-content,
+    #Endereco .localizacao table tr,
+    #Contatos .contact-box p,
+    #msg-box h2 {
+        color: $branco;
+    }
+
+    .main-titulo::before,
+    .modal .btn-close {
+        background-color: $branco;
+    }
+
+    header .botoes-header .header-btn:nth-child(2),
+    main #Sobre,
+    #Programacao,
+    #Convidados,
+    .modal .modal-content,
+    #Endereco,
+    #Contatos {
+        background-color: $preto;
+    }
+
+    .accordion-item,
+    .accordion-header,
+    .accordion-button {
+        background-color: transparent;
+    }
+
+    #Parceiros figure img {
+        filter: drop-shadow(0.05rem 0.05rem 0 $cinza-claro);
+    }
+
+    #Endereco .localizacao table tr {
+        border: 0.01rem solid $branco;
+    }
+
+    #Contatos .contact-box i {
+        border: 0.01rem solid $cinza-claro;
+    }
+
+    #Contatos .contact-box i:hover,
+    #contact-form textarea::placeholder {
+        color: $cinza-claro;
+    }
+
+    #contact-form .group input,
+    #contact-form textarea {
+        background-color: transparent !important;
+    }
+}
+
 @media (width <= 1070px) {
     header .navbar-nav .nav-item,
     header .navbar-nav .nav-link,
@@ -786,6 +858,11 @@ footer .copyright {
 
     main #contact-form textarea {
         @include size(90%, 100%);
+    }
+
+    footer .footer-logo,
+    footer .footer-logo img {
+        padding: 0;
     }
 }
 

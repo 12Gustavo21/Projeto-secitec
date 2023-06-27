@@ -1,3 +1,7 @@
+:root {
+  color-scheme: dark light;
+}
+
 *::-moz-selection {
   background-color: #ad1113;
   color: #ffffff;
@@ -680,6 +684,9 @@ footer .footer-logo {
   width: 100%;
   height: 10rem;
   padding-left: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 footer .footer-logo img {
@@ -838,6 +845,66 @@ footer .copyright {
 }
 
 /*Media Queries*/
+@media (prefers-color-scheme: dark) {
+  header #caixaHeaderUm.visible .navbar,
+  .descricao,
+  #Parceiros,
+  #Convidados .card,
+  footer {
+    background-color: #2d2d2d;
+  }
+  header .botoes-header .header-btn:nth-child(2),
+  main #Sobre,
+  .main-titulo,
+  .accordion-body,
+  #Convidados .card .card-body .card-title,
+  #Convidados .card .card-body .btn,
+  #Contatos .contact-box i,
+  .modal .modal-content,
+  #Endereco .localizacao table tr,
+  #Contatos .contact-box p,
+  #msg-box h2 {
+    color: #ffffff;
+  }
+  .main-titulo::before,
+  .modal .btn-close {
+    background-color: #ffffff;
+  }
+  header .botoes-header .header-btn:nth-child(2),
+  main #Sobre,
+  #Programacao,
+  #Convidados,
+  .modal .modal-content,
+  #Endereco,
+  #Contatos {
+    background-color: #1a1a1a;
+  }
+  .accordion-item,
+  .accordion-header,
+  .accordion-button {
+    background-color: transparent;
+  }
+  #Parceiros figure img {
+    filter: drop-shadow(0.05rem 0.05rem 0 #5e5e5e);
+  }
+  #Endereco .localizacao table tr {
+    border: 0.01rem solid #ffffff;
+  }
+  #Contatos .contact-box i {
+    border: 0.01rem solid #5e5e5e;
+  }
+  #contact-form textarea::-moz-placeholder {
+    color: #5e5e5e;
+  }
+  #Contatos .contact-box i:hover,
+  #contact-form textarea::placeholder {
+    color: #5e5e5e;
+  }
+  #contact-form .group input,
+  #contact-form textarea {
+    background-color: transparent !important;
+  }
+}
 @media (width <= 1070px) {
   header .navbar-nav .nav-item,
   header .navbar-nav .nav-link,
@@ -899,6 +966,10 @@ footer .copyright {
   main #contact-form textarea {
     width: 90%;
     height: 100%;
+  }
+  footer .footer-logo,
+  footer .footer-logo img {
+    padding: 0;
   }
 }
 @media (width <= 768px) {
