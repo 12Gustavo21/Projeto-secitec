@@ -727,24 +727,25 @@ footer .copyright {
 /*Media Queries*/
 @media (prefers-color-scheme: dark) {
     header #caixaHeaderUm.visible .navbar,
-    .descricao,
-    #Parceiros,
-    #Convidados .card,
+    main .descricao,
+    main #Parceiros,
+    main #Convidados .card,
     footer {
         background-color: $cinza;
     }
 
     header .botoes-header .header-btn:nth-child(2),
     main #Sobre,
-    .main-titulo,
-    .accordion-body,
-    #Convidados .card .card-body .card-title,
-    #Convidados .card .card-body .btn,
-    #Contatos .contact-box i,
-    .modal .modal-content,
-    #Endereco .localizacao table tr,
-    #Contatos .contact-box p,
-    #msg-box h2 {
+    main .accordion-body,
+    main .main-titulo,
+    main #Convidados .card .card-body .card-title,
+    main #Convidados .card .card-body .btn,
+    main #Convidados .modal .modal-body,
+    main #Contatos .contact-box i,
+    main .modal .modal-content,
+    main #Endereco .localizacao table tr,
+    main #Contatos .contact-box p,
+    main #msg-box h2 {
         color: $branco;
     }
 
@@ -755,39 +756,39 @@ footer .copyright {
 
     header .botoes-header .header-btn:nth-child(2),
     main #Sobre,
-    #Programacao,
-    #Convidados,
-    .modal .modal-content,
-    #Endereco,
-    #Contatos {
+    main #Programacao,
+    main #Convidados,
+    main .modal .modal-content,
+    main #Endereco,
+    main #Contatos {
         background-color: $preto;
     }
 
-    .accordion-item,
-    .accordion-header,
-    .accordion-button {
+    main .accordion-item,
+    main .accordion-header,
+    main .accordion-button {
         background-color: transparent;
     }
 
-    #Parceiros figure img {
+    main #Parceiros figure img {
         filter: drop-shadow(0.05rem 0.05rem 0 $cinza-claro);
     }
 
-    #Endereco .localizacao table tr {
+    main #Endereco .localizacao table tr {
         border: 0.01rem solid $branco;
     }
 
-    #Contatos .contact-box i {
+    main #Contatos .contact-box i {
         border: 0.01rem solid $cinza-claro;
     }
 
-    #Contatos .contact-box i:hover,
-    #contact-form textarea::placeholder {
+    main #Contatos .contact-box i:hover,
+    main #contact-form textarea::placeholder {
         color: $cinza-claro;
     }
 
-    #contact-form .group input,
-    #contact-form textarea {
+    main #contact-form .group input,
+    main #contact-form textarea {
         background-color: transparent !important;
     }
 }
@@ -900,7 +901,7 @@ footer .copyright {
     }
 
     main #Convidados .modal .modal-body {
-        @include font(1em, 500, $preto);
+        font-size: .9em;
         letter-spacing: -0.02em;
     }
 }
