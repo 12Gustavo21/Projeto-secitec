@@ -37,8 +37,7 @@ $datas = $dados_json->datas;
     <meta name="color-scheme" content="dark light">
 
     <!--Estilos-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/style.css">
 
     <!--Icons-->
@@ -50,18 +49,13 @@ $datas = $dados_json->datas;
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
     <!--JavaScript Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -70,21 +64,16 @@ $datas = $dados_json->datas;
         <section id="caixaHeaderUm">
             <nav class="navbar navbar-expand-lg navbar-dark d-flex 
             flex-row justify-content-between align-items-center px-3 pt-0 pb-0">
-                <figure class="navbar-brand d-flex flex-row justify-content-center align-items-center image-box"
-                    id="inicio">
-                    <img src="http://sistemascr.vhost.ifpb.edu.br/eventos/secitec2022/assets/images/logo8.png"
-                        alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" />
+                <figure class="navbar-brand d-flex flex-row justify-content-center align-items-center image-box" id="inicio">
+                    <img src="http://sistemascr.vhost.ifpb.edu.br/eventos/secitec2022/assets/images/logo8.png" alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" />
                 </figure>
-                <button class="navbar-toggler mt-5" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-end d-flex flex-lg-row justify-content-lg-end align-items-lg-end"
-                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-end d-flex flex-lg-row justify-content-lg-end align-items-lg-end" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Links rápidos</h3>
-                        <button type="button" class="btn-close btn-close-white" aria-label="Close"
-                            data-bs-dismiss="offcanvas"></button>
+                        <button type="button" class="btn-close btn-close-white" aria-label="Close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav d-flex justify-content-end align-items-center 
@@ -105,102 +94,74 @@ $datas = $dados_json->datas;
                                 Programação
                             </li>
                             <li class="nav-item dropdown d-none d-lg-block d-xl-block">
-                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                    data-bs-display="static" aria-expanded="false" title="Editais da SECITEC">
+                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" title="Editais da SECITEC">
                                     Editais
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end dropdown-menu-start">
                                     <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/18cPU5DoKutR70KZQYEEapy-lBtHeayue/view?usp=share_link"
-                                            target="_blank" rel="noopener noreferrer">Cronograma de Defesa (Edital
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/18cPU5DoKutR70KZQYEEapy-lBtHeayue/view?usp=share_link" target="_blank" rel="noopener noreferrer">Cronograma de Defesa (Edital
                                             5.2023)</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/1nEpe3CTm27aflWtjrLgU3eUa_HLFxBDg/view?usp=sharing"
-                                            target="_blank" rel="noopener noreferrer">Cronograma e Orientações
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1nEpe3CTm27aflWtjrLgU3eUa_HLFxBDg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Cronograma e Orientações
                                             Gerais</a>
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/1vIDkU30J7sTnSHjhROQYGF4HQiINtfYn/view?usp=sharing"
-                                            target="_blank" rel="noopener noreferrer">Resultado Mostra Artística
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1vIDkU30J7sTnSHjhROQYGF4HQiINtfYn/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resultado Mostra Artística
                                             Cultural</a>
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/18m1hwOP7qqA43_WHOuIhYjggRWBQd5bT/view?usp=sharing"
-                                            target="_blank" rel="noopener noreferrer">Edital de prorrogação da etapa de
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/18m1hwOP7qqA43_WHOuIhYjggRWBQd5bT/view?usp=sharing" target="_blank" rel="noopener noreferrer">Edital de prorrogação da etapa de
                                             avaliação</a>
                                     </li>
                                     <!--Links inexistentes-->
                                     <li>
-                                        <a class="dropdown-item disabled" href="" target="_blank"
-                                            rel="noopener noreferrer">Lista final de trabalhos inscritos</a>
+                                        <a class="dropdown-item disabled" href="" target="_blank" rel="noopener noreferrer">Lista final de trabalhos inscritos</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item disabled" href="" target="_blank"
-                                            rel="noopener noreferrer">Resultado das submissões</a>
+                                        <a class="dropdown-item disabled" href="" target="_blank" rel="noopener noreferrer">Resultado das submissões</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item disabled" href="" target="_blank"
-                                            rel="noopener noreferrer">Retificação do Edital</a>
+                                        <a class="dropdown-item disabled" href="" target="_blank" rel="noopener noreferrer">Retificação do Edital</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/14dzqTxUFMPX46FEihOQTcPrjYFAXVua9/view?usp=sharing"
-                                            target="_blank" rel="noopener noreferrer">Edital Secitec</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/14dzqTxUFMPX46FEihOQTcPrjYFAXVua9/view?usp=sharing" target="_blank" rel="noopener noreferrer">Edital Secitec</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/19yVetf9Wa2aEXJqOgtzT4DGUjfjxA5KY/view?usp=sharing"
-                                            target="_blank" rel="noopener noreferrer">Edital Mostra Artística e
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/19yVetf9Wa2aEXJqOgtzT4DGUjfjxA5KY/view?usp=sharing" target="_blank" rel="noopener noreferrer">Edital Mostra Artística e
                                             Cultural</a>
                                     </li>
                                 </ul>
                             </li>
                             <div class="d-flex flex-column flex-md-column align-items-center d-lg-none text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link"
-                                        href="https://drive.google.com/file/d/1v8HefUj1X_RLwiFIjrulC3HemPAzhGL1/view"
-                                        target="_blank" rel="noopener noreferrer">Edital Secitec</a>
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1v8HefUj1X_RLwiFIjrulC3HemPAzhGL1/view" target="_blank" rel="noopener noreferrer">Edital Secitec</a>
                                 </li>
                                 <!--Links inexistentes-->
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="" target="_blank"
-                                        rel="noopener noreferrer">Resultado das submissões</a>
+                                    <a class="nav-link disabled" href="" target="_blank" rel="noopener noreferrer">Resultado das submissões</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="" target="_blank"
-                                        rel="noopener noreferrer">Edital Mostra Artística e Cultural</a>
+                                    <a class="nav-link disabled" href="" target="_blank" rel="noopener noreferrer">Edital Mostra Artística e Cultural</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link"
-                                        href="https://drive.google.com/file/d/1nEpe3CTm27aflWtjrLgU3eUa_HLFxBDg/view?usp=sharing"
-                                        target="_blank">Cronograma e Orientações Gerais</a>
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1nEpe3CTm27aflWtjrLgU3eUa_HLFxBDg/view?usp=sharing" target="_blank">Cronograma e Orientações Gerais</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link"
-                                        href="https://drive.google.com/file/d/1vIDkU30J7sTnSHjhROQYGF4HQiINtfYn/view?usp=sharing"
-                                        target="_blank">Resultado Mostra Artística Cultural</a>
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1vIDkU30J7sTnSHjhROQYGF4HQiINtfYn/view?usp=sharing" target="_blank">Resultado Mostra Artística Cultural</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link"
-                                        href="https://drive.google.com/file/d/18cPU5DoKutR70KZQYEEapy-lBtHeayue/view?usp=share_link"
-                                        target="_blank">Cronograma de Defesa (Edital 5.2022)</a>
+                                    <a class="nav-link" href="https://drive.google.com/file/d/18cPU5DoKutR70KZQYEEapy-lBtHeayue/view?usp=share_link" target="_blank">Cronograma de Defesa (Edital 5.2022)</a>
                                 </li>
                             </div>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://sistemascr.vhost.ifpb.edu.br/eventos/app/login"
-                                    target="_blank" rel="noopener noreferrer" title="Fazer login no AdminLTE">Login <i
-                                        class="fa-solid fa-unlock"></i></a>
+                                <a class="nav-link" href="http://sistemascr.vhost.ifpb.edu.br/eventos/app/login" target="_blank" rel="noopener noreferrer" title="Fazer login no AdminLTE">Login <i class="fa-solid fa-unlock"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -350,32 +311,25 @@ $datas = $dados_json->datas;
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-2.jpeg/@@images/d4479dd8-afb2-4b6a-b2d9-85ae26ec39b6.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-2.jpeg/@@images/d4479dd8-afb2-4b6a-b2d9-85ae26ec39b6.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-alyce.jpeg/@@images/d8a463bc-5eb8-4fa5-bb55-d9cfc9f74f59.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-alyce.jpeg/@@images/d8a463bc-5eb8-4fa5-bb55-d9cfc9f74f59.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-secretaria.jpeg/@@images/f5a2f1f1-60e8-44b3-825d-c046984c9524.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-secretaria.jpeg/@@images/f5a2f1f1-60e8-44b3-825d-c046984c9524.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-tamisson.jpeg/@@images/51f282df-9d67-45c4-be90-b04a15e77baa.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-tamisson.jpeg/@@images/51f282df-9d67-45c4-be90-b04a15e77baa.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-uepb.jpeg/@@images/50187065-1b6b-451a-af45-ec88d3577be1.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/abertura-uepb.jpeg/@@images/50187065-1b6b-451a-af45-ec88d3577be1.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/anyconv-com__gincatec3.jpeg/@@images/a3f76d57-f3f4-4eeb-acd5-8fea2bacf83d.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/anyconv-com__gincatec3.jpeg/@@images/a3f76d57-f3f4-4eeb-acd5-8fea2bacf83d.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/anyconv-com__gincatec4.jpeg/@@images/50a6f1e6-1297-4315-aa51-460076614b48.jpeg"
-                                loading="lazy" draggable="false" alt="...">
+                            <img src="https://www.ifpb.edu.br/catoledorocha/noticias/2022/12/ifpb-catole-do-rocha-realiza-7o-semana-de-ciencia-tecnologia-e-cultura-nesse-mes-de-dezembro/anyconv-com__gincatec4.jpeg/@@images/50a6f1e6-1297-4315-aa51-460076614b48.jpeg" loading="lazy" draggable="false" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -393,9 +347,8 @@ $datas = $dados_json->datas;
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Programação</h2>
                 </div>
                 <div class="datas d-flex flex-row justify-content-center align-items-center pt-3">
-                    <ul class="btn-group py-3 px-3 d-flex justify-content-center flex-row flex-wrap reveal w-75 h-100 reveal tabs"
-                        role="group" aria-label="Button group">
-                        <?php foreach ($datas as $index => $data): ?>
+                    <ul class="btn-group py-3 px-3 d-flex justify-content-center flex-row flex-wrap reveal w-75 h-100 reveal tabs" role="group" aria-label="Button group">
+                        <?php foreach ($datas as $index => $data) : ?>
                             <?php
                             $dataFormatada = date('dmY', strtotime($data->ativ_data));
                             $dataAtual = date('d/m/Y', strtotime($data->ativ_data));
@@ -411,43 +364,40 @@ $datas = $dados_json->datas;
                     <div class="programacao-box px-3 w-75">
                         <?php
                         $contador = 0;
-                        foreach ($datas as $index => $data):
+                        foreach ($datas as $index => $data) :
                             $dataFormatada = date('dmY', strtotime($data->ativ_data));
                             $dataAtual = date('d/m/Y', strtotime($data->ativ_data));
                             $isActive = $index === 0 ? 'active' : 'style="display: none"';
-                            ?>
+                        ?>
                             <div id="<?= $dataFormatada; ?>" <?= $isActive ?>>
                                 <?php
-                                foreach ($atividades as $atividade):
+                                foreach ($atividades as $atividade) :
                                     $horaFormatada = date('H:i', strtotime($atividade->ativ_hora));
-                                    if ($atividade->ativ_data == $data->ativ_data):
+                                    if ($atividade->ativ_data == $data->ativ_data) :
                                         $contador++;
-                                        ?>
+                                ?>
                                         <div class="accordion accordion-flush atividade w-90" id="<?= $contador ?>">
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapse<?= $contador ?>"
-                                                        aria-expanded="false" aria-controls="collapse<?= $contador ?>">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $contador ?>" aria-expanded="false" aria-controls="collapse<?= $contador ?>">
                                                         <?= $horaFormatada . ' - ' . $atividade->ativ_nome ?>
                                                     </button>
                                                 </h2>
-                                                <div id="collapse<?= $contador ?>" class="accordion-collapse collapse"
-                                                    data-bs-parent="#<?= $contador ?>">
+                                                <div id="collapse<?= $contador ?>" class="accordion-collapse collapse" data-bs-parent="#<?= $contador ?>">
                                                     <div class="border-bottom border-danger"></div>
                                                     <div class="accordion-body">
                                                         <?php
                                                         $convidadosExibidos = array();
-                                                        foreach ($convidados as $convidado):
-                                                            if ($convidado->conv_atividade_id == $atividade->ativ_id):
-                                                                if (!in_array($convidado->usua_nome, $convidadosExibidos)):
+                                                        foreach ($convidados as $convidado) :
+                                                            if ($convidado->conv_atividade_id == $atividade->ativ_id) :
+                                                                if (!in_array($convidado->usua_nome, $convidadosExibidos)) :
                                                                     array_push($convidadosExibidos, $convidado->usua_nome);
-                                                                    ?>
+                                                        ?>
                                                                     <h6>Convidado(a):
                                                                         <?= $convidado->usua_nome ?>
                                                                     </h6>
                                                                 <?php endif; ?>
-                                                    <?php endif;
+                                                        <?php endif;
                                                         endforeach;
                                                         ?>
                                                         <p>
@@ -458,8 +408,7 @@ $datas = $dados_json->datas;
                                                             <div class="d-flex justify-content-start align-items-center gap-2">
                                                                 <h6 class="mb-0">Carga horária: </h6>
                                                                 <p class="mb-0">
-                                                                    <?= $atividade->ativ_carga_horaria ?><abbr
-                                                                        title="Horas">h</abbr>
+                                                                    <?= $atividade->ativ_carga_horaria ?><abbr title="Horas">h</abbr>
                                                                 </p>
                                                             </div>
                                                             <div class="d-flex justify-content-start align-items-center gap-2">
@@ -473,7 +422,7 @@ $datas = $dados_json->datas;
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php endif;
+                                <?php endif;
                                 endforeach;
                                 ?>
                             </div>
@@ -488,10 +437,8 @@ $datas = $dados_json->datas;
                 </div>
                 <figure class="d-flex justify-content-between align-items-center 
                 flex-wrap flex-column pt-5 flex-lg-row w-50 reveal">
-                    <img src="./assets/geral/logo-proexc.webp" alt="logo-proexc"
-                        class="object-fit-contain parceiro-logo" loading="lazy" draggable="false" title="Logo PROEXC">
-                    <img src="./assets/geral/logo-uepb.webp" alt="logo-uepb" class="object-fit-contain parceiro-logo"
-                        loading="lazy" draggable="false" title="Logo UEPB">
+                    <img src="./assets/geral/logo-proexc.webp" alt="logo-proexc" class="object-fit-contain parceiro-logo" loading="lazy" draggable="false" title="Logo PROEXC">
+                    <img src="./assets/geral/logo-uepb.webp" alt="logo-uepb" class="object-fit-contain parceiro-logo" loading="lazy" draggable="false" title="Logo UEPB">
                 </figure>
             </section>
             <section id="Convidados" class="py-5 gap-3 d-flex justify-content-center align-items-center flex-column">
@@ -512,36 +459,31 @@ $datas = $dados_json->datas;
                     foreach ($convidados as $convidado) {
                         if (!empty($convidado->usua_link_imagem) && !in_array($convidado->usua_email, $convidadosExibidos)) {
                             $convidadosExibidos[] = $convidado->usua_email;
-                            ?>
+                    ?>
                             <article class="card border border-secondary-subtle reveal">
                                 <section class="card-image">
-                                    <img src="<?php echo $convidado->usua_link_imagem; ?>" class="card-img-top" alt="..."
-                                        draggable="false" loading="lazy">
+                                    <img src="<?php echo $convidado->usua_link_imagem; ?>" class="card-img-top" alt="..." draggable="false" loading="lazy">
                                 </section>
                                 <section class="card-body">
                                     <h3 class="card-title">
                                         <?php echo $convidado->usua_nome; ?>
                                     </h3>
-                                    <button class="btn btn-modal btn-outline-secondary p-2 card-button" data-bs-toggle="modal"
-                                        data-bs-target="#modal<?php echo $convidado->usua_email; ?>">Ver biografia</button>
+                                    <button class="btn btn-modal btn-outline-secondary p-2 card-button" data-bs-toggle="modal" data-bs-target="#modal<?php echo $convidado->usua_email; ?>">Ver biografia</button>
                                 </section>
                                 <!-- Modal -->
-                                <section class="modal fade" id="modal<?php echo $convidado->usua_email; ?>"
-                                    aria-labelledby="modalLabel<?php echo $convidado->usua_email; ?>" aria-hidden="true">
+                                <section class="modal fade" id="modal<?php echo $convidado->usua_email; ?>" aria-labelledby="modalLabel<?php echo $convidado->usua_email; ?>" aria-hidden="true">
                                     <section class="modal-dialog modal-dialog-centered">
                                         <section class="modal-content">
                                             <section class="modal-header">
-                                                <h1 class="modal-title fs-5"
-                                                    id="modalLabel<?php echo $convidado->usua_email; ?>">Biografia</h1>
-                                                <button type="button" class="btn-close modal-button" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                <h1 class="modal-title fs-5" id="modalLabel<?php echo $convidado->usua_email; ?>">Biografia</h1>
+                                                <button type="button" class="btn-close modal-button" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </section>
                                             <section class="modal-body">
-                                                <?php if (!empty($convidado->usua_biografia) && $convidado->usua_biografia != "1"): ?>
+                                                <?php if (!empty($convidado->usua_biografia) && $convidado->usua_biografia != "1") : ?>
                                                     <p>
                                                         <?php echo $convidado->usua_biografia; ?>
                                                     </p>
-                                                <?php else: ?>
+                                                <?php else : ?>
                                                     <p>Nenhuma biografia encontrada para este(a) convidado(a)</p>
                                                 <?php endif; ?>
                                             </section>
@@ -549,7 +491,7 @@ $datas = $dados_json->datas;
                                     </section>
                                 </section>
                             </article>
-                            <?php
+                    <?php
                         }
                     }
                     ?>
@@ -562,15 +504,10 @@ $datas = $dados_json->datas;
                 </section>
                 <section class="d-flex align-items-center justify-content-between  flex-column flex-lg-row w-100">
                     <section class="mapa reveal">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.407468947313!2d-37.756957024869514!3d-6.3412402936484815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a53bf74a6405cd%3A0x6f7892b812b2fd00!2sIFPB%20-%20Campus%20Catol%C3%A9%20do%20Rocha!5e0!3m2!1spt-BR!2sbr!4v1683920729658!5m2!1spt-BR!2sbr"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Mapa de localização do IFPB - Campus Catolé do Rocha"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.407468947313!2d-37.756957024869514!3d-6.3412402936484815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a53bf74a6405cd%3A0x6f7892b812b2fd00!2sIFPB%20-%20Campus%20Catol%C3%A9%20do%20Rocha!5e0!3m2!1spt-BR!2sbr!4v1683920729658!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização do IFPB - Campus Catolé do Rocha"></iframe>
                     </section>
                     <section class="localizacao">
-                        <section
-                            class="endereco-completo text-center d-flex align-items-center justify-content-center reveal">
+                        <section class="endereco-completo text-center d-flex align-items-center justify-content-center reveal">
                             <table>
                                 <tr>
                                     <th>Endereço</th>
@@ -636,9 +573,69 @@ $datas = $dados_json->datas;
                         <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Ou nos deixe uma
                             mensagem</h2>
                     </section>
+                    <?php
+                    require './PHPMailer/src/Exception.php';
+                    require './PHPMailer/src/PHPMailer.php';
+                    require './PHPMailer/src/SMTP.php';
+
+                    use PHPMailer\PHPMailer\PHPMailer;
+                    use PHPMailer\PHPMailer\Exception;
+
+                    // Configurar a codificação padrão do PHP para UTF-8
+                    mb_internal_encoding('UTF-8');
+
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        if (isset($_POST['name'], $_POST['email'], $_POST['message'])) {
+                            $name = $_POST['name'];
+                            $email = $_POST['email'];
+                            $message = $_POST['message'];
+
+                            try {
+                                $mail = new PHPMailer(true);
+                                $mail->isSMTP();
+                                $mail->Host = "smtp.hostinger.com";
+                                $mail->Port = 465;
+                                $mail->SMTPSecure = 'ssl';
+                                $mail->SMTPAuth = true;
+                                $mail->Username = 'suporte@sistemascr.net';
+                                $mail->Password = 'Suporte2022#';
+
+                                $mail->setFrom('suporte@sistemascr.net', 'Suporte do SistemaSCR');
+                                $mail->addAddress('suporte@sistemascr.net', 'Suporte do SistemaSCR');
+
+                                $mail->isHTML(true);
+                                $mail->CharSet = 'UTF-8';
+                                $mail->Subject = 'Mensagem do site da SECITEC';
+
+                                $mail->Body = "
+                                <div style='font-family: Arial, sans-serif;'>
+                                    <h3>Olá, <strong>Suporte do SistemasCR</strong>!</h3>
+                                    <p>Você recebeu uma mensagem através do site da SECITEC:</p>
+                                    <p><strong>Nome:</strong> {$name}</p>
+                                    <p><strong>Email:</strong> {$email}</p>
+                                    <p><strong>Mensagem:</strong> {$message}</p>
+                                    <p>Atenciosamente,<br>Seu site da SECITEC</p>
+                                    <p><small>Esta mensagem foi enviada em <strong>" . date('d/m/Y') . "</strong> às <strong>" . date('H:i:s') . "</strong></small></p> 
+                                </div>";
+
+                                $mail->send();
+
+                                // Limpar o formulário após o envio
+                                $_POST['name'] = '';
+                                $_POST['email'] = '';
+                                $_POST['message'] = '';
+
+                                echo "<script>alert('Mensagem enviada com sucesso!'); window.location.href = 'index.php';</script>";
+                                exit;
+                            } catch (Exception $e) {
+                                echo "<script>alert('Erro ao enviar mensagem: {$mail->ErrorInfo}');</script>";
+                            }
+                        }
+                    }
+                    ?>
+
                     <section id="contact-form">
-                        <form class="w-100 d-flex flex-column justify-content-center align-items-center reveal"
-                            action="https://formsubmit.co/gustavo927318@gmail.com" method="POST">
+                        <form class="w-100 d-flex flex-column justify-content-center align-items-center reveal" method="POST" accept-charset="utf-8">
                             <div class="group">
                                 <input type="text" class="input" id="input-nome" name="name" required>
                                 <span class="highlight"></span>
@@ -651,8 +648,7 @@ $datas = $dados_json->datas;
                                 <span class="bar"></span>
                                 <label class="label" for="input-email">Seu melhor email</label>
                             </div>
-                            <textarea class="form-control" rows="5" placeholder="Sua mensagem..." name="message"
-                                required spellcheck="true" required></textarea>
+                            <textarea class="form-control" rows="5" placeholder="Sua mensagem..." name="message" required spellcheck="true"></textarea>
                             <button class="form-button" type="submit" data-button>Enviar</button>
                         </form>
                     </section>
@@ -663,31 +659,23 @@ $datas = $dados_json->datas;
     <!--Footer-->
     <footer class="d-flex flex-row justify-content-center align-items-start w-100 h-50">
         <section class="d-flex justify-content-start align-items-center flex-column w-100 h-100 reveal">
-            <section
-                class="footer-logo image-box d-flex justify-content-center align-items-center justify-content-lg-start">
-                <img src="http://sistemascr.vhost.ifpb.edu.br/eventos/secitec2022/assets/images/logo8.png"
-                    alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" id="inicio">
+            <section class="footer-logo image-box d-flex justify-content-center align-items-center justify-content-lg-start">
+                <img src="http://sistemascr.vhost.ifpb.edu.br/eventos/secitec2022/assets/images/logo8.png" alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" id="inicio">
             </section>
-            <section
-                class="d-flex flex-column flex-lg-row-reverse justify-content-center align-items-center justify-content-lg-start gap-5 w-100 h-50">
-                <section
-                    class="social d-flex flex-row justify-content-center align-items-center justify-content-lg-end gap-3 w-100 h-50">
-                    <a href="https://www.instagram.com/ifpbcatole.oficial" target="_blank"
-                        title="Instagram oficial do campus">
+            <section class="d-flex flex-column flex-lg-row-reverse justify-content-center align-items-center justify-content-lg-start gap-5 w-100 h-50">
+                <section class="social d-flex flex-row justify-content-center align-items-center justify-content-lg-end gap-3 w-100 h-50">
+                    <a href="https://www.instagram.com/ifpbcatole.oficial" target="_blank" title="Instagram oficial do campus">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://pt-br.facebook.com/ifpbcatoledorocha" target="_blank"
-                        title="Facebook oficial do campus">
+                    <a href="https://pt-br.facebook.com/ifpbcatoledorocha" target="_blank" title="Facebook oficial do campus">
                         <i class="fa fa-facebook-square" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.youtube.com/@ifpb-catoledorocha221" target="_blank"
-                        title="Youtube oficial do campus">
+                    <a href="https://www.youtube.com/@ifpb-catoledorocha221" target="_blank" title="Youtube oficial do campus">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
                 </section>
                 <section class="navigation ps-3">
-                    <ul
-                        class="footer-list d-flex flex-column flex-lg-row justify-content-center align-items-center justify-content-lg-start gap-3 w-100 h-50">
+                    <ul class="footer-list d-flex flex-column flex-lg-row justify-content-center align-items-center justify-content-lg-start gap-3 w-100 h-50">
                         <li class="nav-item" id="inicio" title="Início">
                             Início
                         </li>
@@ -706,8 +694,7 @@ $datas = $dados_json->datas;
                     </ul>
                 </section>
             </section>
-            <section
-                class="copyright d-flex flex-column align-items-center align-items-lg-start justify-content-center w-100 h-50">
+            <section class="copyright d-flex flex-column align-items-center align-items-lg-start justify-content-center w-100 h-50">
                 <p>&copy; <span id="year"> </span> Todos os direitos reservados ao IFPB</p>
             </section>
         </section>
