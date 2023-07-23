@@ -1,4 +1,3 @@
-<!--PHP-->
 <?php
 $url = "http://sistemascr.vhost.ifpb.edu.br/eventos/app/webservice/?evento=secitec2022";
 
@@ -625,7 +624,11 @@ $datas = $dados_json->datas;
                                 $_POST['email'] = '';
                                 $_POST['message'] = '';
 
-                                echo "<script>alert('Mensagem enviada com sucesso!'); window.location.href = 'index.php';</script>";
+                                echo <<<HTML
+                                <script>
+                                        window.location.href = 'mensagem_enviada.html';
+                                </script>
+                                HTML;
                                 exit;
                             } catch (Exception $e) {
                                 echo "<script>alert('Erro ao enviar mensagem: {$mail->ErrorInfo}');</script>";
@@ -649,7 +652,7 @@ $datas = $dados_json->datas;
                                 <label class="label" for="input-email">Seu melhor email</label>
                             </div>
                             <textarea class="form-control" rows="5" placeholder="Sua mensagem..." name="message" required spellcheck="true"></textarea>
-                            <button class="form-button" type="submit" data-button>Enviar</button>
+                            <button class="form-button" type="submit">Enviar</button>
                         </form>
                     </section>
                 </section>
