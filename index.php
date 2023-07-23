@@ -580,8 +580,9 @@ $datas = $dados_json->datas;
                     use PHPMailer\PHPMailer\PHPMailer;
                     use PHPMailer\PHPMailer\Exception;
 
-                    // Configurar a codificação padrão do PHP para UTF-8
                     mb_internal_encoding('UTF-8');
+
+                    date_default_timezone_set('America/Sao_Paulo');
 
                     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if (isset($_POST['name'], $_POST['email'], $_POST['message'])) {
