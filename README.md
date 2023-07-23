@@ -13,6 +13,7 @@
 + CSS <img width ='20px' src ='https://cdn-icons-png.flaticon.com/512/732/732190.png' />
 + SCSS <img width ='20px' src ='https://cdn.iconscout.com/icon/free/png-512/sass-226054.png' />
 + JavaScript <img width ='20px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png' />
++ PHPMailer <img width ='20px' src ='https://avatars.githubusercontent.com/u/3959702?s=48&v=4' />
 
 ### How to use
     
