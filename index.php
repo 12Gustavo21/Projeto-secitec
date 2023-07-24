@@ -600,8 +600,8 @@ $datas = $dados_json->datas;
                                 $mail->Username = 'suporte@sistemascr.net';
                                 $mail->Password = 'Suporte2022#';
 
-                                $mail->setFrom('suporte@sistemascr.net', 'Suporte do SistemaSCR');
-                                $mail->addAddress('suporte@sistemascr.net', 'Suporte do SistemaSCR');
+                                $mail->setFrom('suporte@sistemascr.net', 'Suporte do SistemasCR');
+                                $mail->addAddress('suporte@sistemascr.net', 'Suporte do SistemasCR');
 
                                 $mail->isHTML(true);
                                 $mail->CharSet = 'UTF-8';
