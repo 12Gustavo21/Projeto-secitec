@@ -64,7 +64,7 @@ $datas = $dados_json->datas;
             <nav class="navbar navbar-expand-lg navbar-dark d-flex 
             flex-row justify-content-between align-items-center px-3 pt-0 pb-0">
                 <figure class="navbar-brand d-flex flex-row justify-content-center align-items-center image-box" id="inicio">
-                    <img src="http://sistemascr.vhost.ifpb.edu.br/eventos/secitec2022/assets/images/logo8.png" alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" />
+                    <img src="./assets/geral/logoSECITEC.webp" alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" />
                 </figure>
                 <button class="navbar-toggler mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -664,7 +664,7 @@ $datas = $dados_json->datas;
     <footer class="d-flex flex-row justify-content-center align-items-start w-100 h-50">
         <section class="d-flex justify-content-start align-items-center flex-column w-100 h-100 reveal">
             <section class="footer-logo image-box d-flex justify-content-center align-items-center justify-content-lg-start">
-                <img src="http://sistemascr.vhost.ifpb.edu.br/eventos/secitec2022/assets/images/logo8.png" alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" id="inicio">
+                <img src="./assets/geral/logoSECITEC.webp" alt="Logo da 8ª SECITEC" loading="lazy" draggable="false" title="Logo da 8ª SECITEC" id="inicio">
             </section>
             <section class="d-flex flex-column flex-lg-row-reverse justify-content-center align-items-center justify-content-lg-start gap-5 w-100 h-50">
                 <section class="social d-flex flex-row justify-content-center align-items-center justify-content-lg-end gap-3 w-100 h-50">
