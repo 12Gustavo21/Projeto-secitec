@@ -70,6 +70,7 @@ header .navbar-brand {
 }
 
 header .navbar-brand img,
+// Footer
 footer .footer-logo img {
     width: 12rem;
     cursor: pointer;
@@ -81,6 +82,7 @@ header .navbar-nav {
 
 header .navbar-nav .nav-item,
 header .navbar-nav .nav-link,
+//Footer
 footer .footer-list .nav-item {
     @include flex(row, center, center);
     @include font(1.2em, 300, $branco);
@@ -92,7 +94,12 @@ footer .footer-list .nav-item {
     gap: 0.5rem;
 }
 
+header .navbar-nav .nav-link {
+    padding: 0;
+}
+
 header .navbar-nav .nav-item:hover,
+//Footer
 footer .footer-list .nav-item:hover {
     background-size: 100% 100%;
     z-index: 0;
@@ -158,6 +165,8 @@ header .botoes-header .header-btn:hover {
 }
 
 /*Main*/
+
+// Sobre
 .main-titulo {
     @include size(100%, 100%);
     @include font(2.2em, 500, $preto);
@@ -183,6 +192,7 @@ header .botoes-header .header-btn:hover {
     bottom: 1.7rem;
 }
 
+/*SECITEC'S passadas*/
 #carousel img {
     @include size(100%, 30rem);
     object-fit: cover;
@@ -214,6 +224,7 @@ header .botoes-header .header-btn:hover {
     background-color: $vermelho;
 }
 
+/*Programação*/
 .btn-group {
     list-style: none;
 }
@@ -228,6 +239,7 @@ header .botoes-header .header-btn:hover {
     box-shadow: 0 0.5rem 0.5rem -0.4rem $vermelho-escuro;
 }
 
+/*Parceiros*/
 #Parceiros {
     background-color: $branco-escuro;
 }
@@ -236,6 +248,7 @@ header .botoes-header .header-btn:hover {
     @include size(12rem, 12rem);
 }
 
+/*Convidados*/
 .card-box {
     @include size(100%, 100%);
 }
@@ -286,6 +299,7 @@ header .botoes-header .header-btn:hover {
     transform: scale(1.1);
 }
 
+/*Endereço*/
 #Endereco {
     @include size(100%, 100%);
     @include flex(column, center, center);
@@ -329,6 +343,7 @@ table tr td {
     padding: 0.5rem;
 }
 
+/*Contatos*/
 .informacoes-contatos {
     @include size(100%, 40vh);
 }
@@ -560,6 +575,7 @@ table tr td {
     }
 }
 
+/*Footer*/
 footer {
     background-color: $preto;
     padding: 0 2rem 2rem 2rem;
@@ -603,7 +619,9 @@ footer .copyright {
 
 /*Animate*/
 .reveal {
-    transition: opacity 0.5s, transform 0.5s;
+    transition:
+        opacity 0.5s,
+        transform 0.5s;
 }
 
 /*Accordions*/
@@ -725,6 +743,8 @@ footer .copyright {
 }
 
 /*Media Queries*/
+
+/*Dark mode*/
 @media (prefers-color-scheme: dark) {
     header #caixaHeaderUm.visible .navbar,
     main .descricao,
@@ -798,6 +818,7 @@ footer .copyright {
     }
 }
 
+/*Breakpoints*/
 @media (width <= 1070px) {
     header .navbar-nav .nav-item,
     header .navbar-nav .nav-link,
@@ -906,7 +927,7 @@ footer .copyright {
     }
 
     main #Convidados .modal .modal-body {
-        font-size: .9em;
+        font-size: 0.9em;
         letter-spacing: -0.02em;
     }
 }

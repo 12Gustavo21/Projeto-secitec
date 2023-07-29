@@ -75,7 +75,7 @@ $datas = $dados_json->datas;
                         <button type="button" class="btn-close btn-close-white" aria-label="Close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav d-flex justify-content-end align-items-center 
+                        <ul class="navbar-nav d-flex justify-content-end align-items-start 
                         flex-grow-1 gap-2 align-items-lg-center">
                             <li class="nav-item" id="inicio" title="Início">
                                 Início
@@ -98,65 +98,19 @@ $datas = $dados_json->datas;
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end dropdown-menu-start">
                                     <li>
-                                        <a class="dropdown-item" href="https://drive.google.com/file/d/18cPU5DoKutR70KZQYEEapy-lBtHeayue/view?usp=share_link" target="_blank" rel="noopener noreferrer">Cronograma de Defesa (Edital
-                                            5.2023)</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1IAMOV6S2GFdl9In0-BO000AVJ5RTlXML/view" target="_blank" rel="noopener noreferrer">Edital da SECITEC</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1nEpe3CTm27aflWtjrLgU3eUa_HLFxBDg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Cronograma e Orientações
-                                            Gerais</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1vIDkU30J7sTnSHjhROQYGF4HQiINtfYn/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resultado Mostra Artística
-                                            Cultural</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="https://drive.google.com/file/d/18m1hwOP7qqA43_WHOuIhYjggRWBQd5bT/view?usp=sharing" target="_blank" rel="noopener noreferrer">Edital de prorrogação da etapa de
-                                            avaliação</a>
-                                    </li>
-                                    <!--Links inexistentes-->
-                                    <li>
-                                        <a class="dropdown-item disabled" href="" target="_blank" rel="noopener noreferrer">Lista final de trabalhos inscritos</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item disabled" href="" target="_blank" rel="noopener noreferrer">Resultado das submissões</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item disabled" href="" target="_blank" rel="noopener noreferrer">Retificação do Edital</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="https://drive.google.com/file/d/14dzqTxUFMPX46FEihOQTcPrjYFAXVua9/view?usp=sharing" target="_blank" rel="noopener noreferrer">Edital Secitec</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="https://drive.google.com/file/d/19yVetf9Wa2aEXJqOgtzT4DGUjfjxA5KY/view?usp=sharing" target="_blank" rel="noopener noreferrer">Edital Mostra Artística e
-                                            Cultural</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1eWettKJ6VGWLbR_6wdvjweCF-bwRZ11B/view" target="_blank" rel="noopener noreferrer">Anexos do edital da SECITEC</a>
                                     </li>
                                 </ul>
                             </li>
-                            <div class="d-flex flex-column flex-md-column align-items-center d-lg-none text-center">
+                            <div class="d-flex flex-column flex-md-column align-items-start align-items-lg-center d-lg-none text-center gap-2">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://drive.google.com/file/d/1v8HefUj1X_RLwiFIjrulC3HemPAzhGL1/view" target="_blank" rel="noopener noreferrer">Edital Secitec</a>
-                                </li>
-                                <!--Links inexistentes-->
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="" target="_blank" rel="noopener noreferrer">Resultado das submissões</a>
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1IAMOV6S2GFdl9In0-BO000AVJ5RTlXML/view" target="_blank" rel="noopener noreferrer">Edital SECITEC</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="" target="_blank" rel="noopener noreferrer">Edital Mostra Artística e Cultural</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://drive.google.com/file/d/1nEpe3CTm27aflWtjrLgU3eUa_HLFxBDg/view?usp=sharing" target="_blank">Cronograma e Orientações Gerais</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://drive.google.com/file/d/1vIDkU30J7sTnSHjhROQYGF4HQiINtfYn/view?usp=sharing" target="_blank">Resultado Mostra Artística Cultural</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://drive.google.com/file/d/18cPU5DoKutR70KZQYEEapy-lBtHeayue/view?usp=share_link" target="_blank">Cronograma de Defesa (Edital 5.2022)</a>
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1eWettKJ6VGWLbR_6wdvjweCF-bwRZ11B/view" target="_blank" rel="noopener noreferrer">Anexos do edital da SECITEC</a>
                                 </li>
                             </div>
                             <li class="nav-item">
@@ -233,6 +187,7 @@ $datas = $dados_json->datas;
     <!--Main-->
     <main>
         <section class="main-container">
+            <!-- Loader -->
             <section class="loader">
                 <div class="waterfall">
                     <div></div>
@@ -243,6 +198,7 @@ $datas = $dados_json->datas;
                 </div>
                 <p>Carregando...</p>
             </section>
+            <!-- Sobre -->
             <section id="Sobre" class="py-5">
                 <div>
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Sobre a SECITEC</h2>
@@ -293,6 +249,7 @@ $datas = $dados_json->datas;
                     </figure>
                 </div>
             </section>
+            <!-- SECITEC'S passadas -->
             <section id="SECTIEC-passadas">
                 <section class="descricao d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">SECITEC's passadas
@@ -341,6 +298,7 @@ $datas = $dados_json->datas;
                     </button>
                 </div>
             </section>
+            <!-- Programação -->
             <section id="Programacao" class="card-tabs py-5">
                 <div class="d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Programação</h2>
@@ -429,6 +387,7 @@ $datas = $dados_json->datas;
                     </div>
                 </div>
             </section>
+            <!-- Parceiros -->
             <section id="Parceiros" class="d-flex flex-wrap flex-column align-items-center 
             justify-content-between w-100 h-100 py-3">
                 <div class="d-flex justify-content-center align-items-center w-100 pt-3">
@@ -440,6 +399,7 @@ $datas = $dados_json->datas;
                     <img src="./assets/geral/logo-uepb.webp" alt="logo-uepb" class="object-fit-contain parceiro-logo" loading="lazy" draggable="false" title="Logo UEPB">
                 </figure>
             </section>
+            <!-- Convidados -->
             <section id="Convidados" class="py-5 gap-3 d-flex justify-content-center align-items-center flex-column">
                 <div class="d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Convidados</h2>
@@ -496,6 +456,7 @@ $datas = $dados_json->datas;
                     ?>
                 </div>
             </section>
+            <!-- Endereço -->
             <section id="Endereco" class="pb-5">
                 <section class="descricao d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Faça-nos uma visita
@@ -549,6 +510,7 @@ $datas = $dados_json->datas;
                     </section>
                 </section>
             </section>
+            <!-- Contatos -->
             <section id="Contatos" class="pb-5">
                 <section class="d-flex justify-content-center align-items-center">
                     <h2 class="main-titulo d-flex align-items-center justify-content-center reveal">Entre em contato
@@ -564,7 +526,7 @@ $datas = $dados_json->datas;
                     </section>
                     <section class="contact-box">
                         <i class="fa-solid fa-envelope"></i>
-                        <p><span class="contact-title">Envie um e-mail:</span> secitec_cr@ifpb.edu.br</p>
+                        <p><span class="contact-title">Envie um e-mail:</span> suporte@sistemascr.net</p>
                     </section>
                 </section>
                 <section class="d-flex flex-column flex-lg-row justify-content-around align-items-start text-center">
