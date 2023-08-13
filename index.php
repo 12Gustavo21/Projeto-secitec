@@ -244,7 +244,7 @@ $datas = $dados_json->datas;
                             </li>
                         </ul>
                     </div>
-                    <figure class="w-100 h-100 reveal">
+                    <figure class="w-75 h-75 reveal">
                         <img class="w-100 h-100" src="./assets/geral/01.webp" alt="Banner de divulgação principal">
                     </figure>
                 </div>

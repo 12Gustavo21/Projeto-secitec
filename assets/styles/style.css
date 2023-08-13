@@ -72,11 +72,12 @@ header #caixaHeaderUm.hidden {
 header .navbar-brand {
   width: 20%;
   height: 100%;
+  padding: 1rem 0 0 0;
 }
 
 header .navbar-brand img,
 footer .footer-logo img {
-  width: 12rem;
+  width: 13rem;
   cursor: pointer;
 }
 
@@ -701,10 +702,6 @@ footer .footer-logo {
           user-select: none;
 }
 
-footer .footer-logo img {
-  padding-left: 0.5rem;
-}
-
 footer .social a {
   display: flex;
   flex-direction: row;
@@ -934,6 +931,11 @@ footer .copyright {
 @media (width >= 992px) {
   .navbar-expand-lg .offcanvas {
     height: 80% !important;
+  }
+}
+@media (width <= 991px) {
+  header .navbar-brand {
+    padding-bottom: 1rem;
   }
 }
 @media (width <= 992px) {
