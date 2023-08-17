@@ -103,6 +103,9 @@ $datas = $dados_json->datas;
                                     <li>
                                         <a class="dropdown-item" href="https://drive.google.com/file/d/1eWettKJ6VGWLbR_6wdvjweCF-bwRZ11B/view" target="_blank" rel="noopener noreferrer">Anexos do edital da SECITEC</a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/1ktq-wCqiI_M-Gej5r4wweCxdK9ROzZq7/view?pli=1" target="_blank" rel="noopener noreferrer">Lista preliminar de trabalhos escritos</a>
+                                    </li>
                                 </ul>
                             </li>
                             <div class="d-flex flex-column flex-md-column align-items-start align-items-lg-center d-lg-none text-center gap-2">
@@ -111,6 +114,9 @@ $datas = $dados_json->datas;
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="https://drive.google.com/file/d/1eWettKJ6VGWLbR_6wdvjweCF-bwRZ11B/view" target="_blank" rel="noopener noreferrer">Anexos do edital da SECITEC</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1ktq-wCqiI_M-Gej5r4wweCxdK9ROzZq7/view?pli=1" target="_blank" rel="noopener noreferrer">Lista preliminar de trabalhos escritos</a>
                                 </li>
                             </div>
                             <li class="nav-item">
@@ -206,7 +212,7 @@ $datas = $dados_json->datas;
                 <div class="d-flex align-items-center justify-content-center px-3 flex-column flex-lg-row">
                     <div class="pt-5 pe-3 reveal">
                         <p>
-                            A 7ª. Semana de Ciência, Tecnologia e Cultura – SECITEC.CR-22 é um evento acadêmico de
+                            A 8ª. Semana de Ciência, Tecnologia e Cultura – SECITEC.CR-23 é um evento acadêmico de
                             incentivo à aprendizagem significativa por meio da solução de problemas com uso de método
                             científico e pensamento inovador. É o principal evento de Ciência & Tecnologia do nosso
                             Campus e tem os seguintes objetivos:
@@ -521,8 +527,8 @@ $datas = $dados_json->datas;
                     align-items-center text-center informacoes-contatos reveal">
                     <section class="contact-box">
                         <i class="fa-solid fa-phone"></i>
-                        <p><span class="contact-title">Ligue para:</span> (83) 99126-1908</p>
-                        <p><span class="contact-title">Horários:</span> 8:00 - 17:00</p>
+                        <p><span class="contact-title">Ligue para:</span> (83) 99802-0573</p>
+                        <p><span class="contact-title">Horários:</span> Seg a Sext 7h às 11h e 13h às 17h.</p>
                     </section>
                     <section class="contact-box">
                         <i class="fa-solid fa-envelope"></i>
