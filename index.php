@@ -427,7 +427,7 @@ $datas = $dados_json->datas;
                     ?>
                             <article class="card border border-secondary-subtle reveal">
                                 <section class="card-image">
-                                    <img src="<?php echo $convidado->usua_link_imagem; ?>" class="card-img-top" alt="..." draggable="false" loading="lazy">
+                                    <img src="<?php echo $convidado->usua_link_imagem; ?>" class="card-img-top" alt="<?php echo $convidado->usua_nome; ?>" loading="lazy" draggable="false">
                                 </section>
                                 <section class="card-body">
                                     <h3 class="card-title">
