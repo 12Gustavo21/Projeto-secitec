@@ -1,6 +1,6 @@
 # Projeto secitec
 
-> Status : Unfinished project 🕰️ / Open PR
+> Status : Finished project ✅ / Open PR
 
 ## <img width ='20px' src ='./assets/icons/icon.svg' /> IFPB-CR Project <img width ='20px' src ='./assets/icons/icon.svg' />
 
